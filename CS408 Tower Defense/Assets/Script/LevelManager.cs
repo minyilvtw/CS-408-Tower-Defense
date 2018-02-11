@@ -11,6 +11,8 @@ public class LevelManager : MonoSingleton<LevelManager> {
     private int amountOfWaves;
     private float waveRemainingTime;
 
+    public bool canBuild = false;
+
     private bool spawnActive = false;
     private bool waveActive = false;
 

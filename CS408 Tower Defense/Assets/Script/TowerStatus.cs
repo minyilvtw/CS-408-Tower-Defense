@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class TowerStatus : MonoBehaviour {
 
-    
-    
-
     public GUIContent Icon;
     [Header("Attributes")]
     public int level = 0;
@@ -103,8 +100,23 @@ public class TowerStatus : MonoBehaviour {
 
     void OnMouseDown()
     {
+
+        float shortestDistance = Mathf.Infinity;
+        GameObject bestSpot = null;
+
         if (UIManager.Instance.sellActive)
         {
+            foreach(GameObject towerZone in GameObject.FindGameObjectsWithTag("TowerSpawnZone"))
+            {
+                float distanceToZone = Vector3.Distance(gameObject.transform.position, towerZone.transform.position);
+                if (distanceToZone < shortestDistance)
+                {
+                    shortestDistance = distanceToZone;
+                    bestSpot = towerZone;
+                }
+            }
+
+            bestSpot.GetComponent<ZoneBuildable>().zoneTaken = false;
             Debug.Log("SOLD!");
             Destroy(gameObject);
             LevelManager.Instance.SetGold(sell[level]);
