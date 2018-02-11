@@ -28,7 +28,7 @@ public class EnemyStatus : MonoBehaviour
     public void Update()
     {
         CharacterController controller = GetComponent<CharacterController>();
-        controller.Move(new Vector3(0,0,1) * .05f);
+        controller.Move(new Vector3(0,0,1) * .02f);
     }
 
 }
