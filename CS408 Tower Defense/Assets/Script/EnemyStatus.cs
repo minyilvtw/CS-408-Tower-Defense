@@ -10,7 +10,7 @@ public class EnemyStatus : MonoBehaviour
 
     public void Start()
     {
-        currentHealth = 50;
+        //currentHealth ;
         healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
     }
 
@@ -20,7 +20,7 @@ public class EnemyStatus : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            Debug.Log("Dead!");
+            SpawnManager.Instance.DestroyEnemy(gameObject);
         }
         healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
     }

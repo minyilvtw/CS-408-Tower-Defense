@@ -6,23 +6,32 @@ public class SpawnManager : MonoSingleton<SpawnManager> {
 
     public List<Transform> spawnPoint = new List<Transform>();
     public List<GameObject> spawnPrefabs = new List<GameObject>();
-    // Use this for initialization
+
+    private List<GameObject> activeEnemies = new List<GameObject>();
+
     public void Spawn(int spawnPrefabIndex)
     {
         Spawn(spawnPrefabIndex, 0);
     }
 
     public void Spawn(int spawnPrefabIndex, int spawnPointIndex) {
-        Instantiate(spawnPrefabs[spawnPrefabIndex], spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation);
+        GameObject go = Instantiate(spawnPrefabs[spawnPrefabIndex], spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation);
+        activeEnemies.Add(go);
+    }
+
+    public void DestroyEnemy(GameObject go)
+    {
+        activeEnemies.Remove(go);
+        Destroy(go);
+    }
+
+    public int GetEnemiesLeft()
+    {
+        return activeEnemies.Count;
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            Spawn(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            Spawn(0,0);
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-            Spawn(0,1);
+     
     }
 }

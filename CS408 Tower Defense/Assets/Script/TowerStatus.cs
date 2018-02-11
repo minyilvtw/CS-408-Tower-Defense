@@ -5,21 +5,31 @@ using UnityEngine.UI;
 
 public class TowerStatus : MonoBehaviour {
 
-    public GUIContent Icon;
-    public int level = 0;
-    public List<int> cost;
-    public List<int> sell;
-    public List<float> range;
-    public List<string> Description;
-    public List<GameObject> bulletPrefab;
-    public Transform bulletSpawn;
+    
+    
 
+    public GUIContent Icon;
+    [Header("Attributes")]
+    public int level = 0;
+    public static int maxLevel = 2;
+    public List<int> cost = new List<int>(maxLevel);
+    public List<int> sell = new List<int>(maxLevel);
+    public List<float> range = new List<float>(maxLevel);
+    public List<float> fireRate = new List<float>(maxLevel);
+    public List<string> Description = new List<string>(maxLevel);
+    public List<GameObject> bulletPrefab = new List<GameObject>(maxLevel);
+
+    [Header("Unity Setup Fields")]
+    public Transform bulletSpawn;
     public Transform partToRotate;
+
     public float rotationSpeed = 8f;
 
     public Transform target;
 
-	// Use this for initialization
+    private float fireCountdown = 0f;
+
+
 	void Start () {
         InvokeRepeating("UpdateTarget", 0f, 1f);
 	}
@@ -27,26 +37,23 @@ public class TowerStatus : MonoBehaviour {
     void UpdateTarget() {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         int lowestHealth = 99999999;
+        float shortestDistance = Mathf.Infinity;
         GameObject bestEnemy = null;
 
-        foreach (GameObject enemy in enemies)
-        {
-            
+        foreach (GameObject enemy in enemies) {
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
             int enemyHealth = enemy.GetComponent<EnemyStatus>().currentHealth;
-            if (enemyHealth < lowestHealth)
+            if (distanceToEnemy < shortestDistance)
             {
-                lowestHealth = enemyHealth;
+                shortestDistance = distanceToEnemy;
                 bestEnemy = enemy;
             }
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (bestEnemy != null && distanceToEnemy < range[level])
-            {
-                target = bestEnemy.transform;
-                Fire();
-            } else
-            {
-                target = null;
-            }
+ 
+        }
+        
+        if (bestEnemy != null && shortestDistance <= range[level])
+        {
+            target = bestEnemy.transform;
         }
     }
 
@@ -56,7 +63,6 @@ public class TowerStatus : MonoBehaviour {
             return;
         }
 
-        //transform.LookAt(target.position);
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime).eulerAngles;
@@ -64,9 +70,15 @@ public class TowerStatus : MonoBehaviour {
         //Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, rotationSpeed * Time.deltaTime).eulerAngles;
         //partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
+        if(fireCountdown <= 0f)
+        {
+            Fire();
+            fireCountdown = 1f / fireRate[level];
+        }
+
+        fireCountdown -= Time.deltaTime;
 
     }
-
 
 
     void Fire()
@@ -87,6 +99,17 @@ public class TowerStatus : MonoBehaviour {
         }
 
         Destroy(bullet, 3.0f);
+    }
+
+    void OnMouseDown()
+    {
+        if (UIManager.Instance.sellActive)
+        {
+            Debug.Log("SOLD!");
+            Destroy(gameObject);
+            LevelManager.Instance.SetGold(sell[level]);
+        }
+        
     }
 
 

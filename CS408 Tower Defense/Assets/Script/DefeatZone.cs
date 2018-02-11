@@ -10,7 +10,7 @@ public class DefeatZone : MonoBehaviour {
         if(col.tag == "Enemy")
         {
             levelManager.EnemyCrossed();
-            Destroy(col.gameObject);
+            SpawnManager.Instance.DestroyEnemy(col.gameObject);
         }
     }
 }

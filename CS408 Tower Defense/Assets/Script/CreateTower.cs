@@ -39,7 +39,7 @@ public class CreateTower : MonoBehaviour {
         if (progress.currentProgress >= 100 && doing == true) {
             doing = false;
             progress.currentProgress = 0;
-            Vector3 spawnPosition = transform.position + (transform.forward * 2);
+            Vector3 spawnPosition = transform.position + (transform.forward * 1.5f);
             Instantiate(Tower, spawnPosition, new Quaternion(0, 0, 0, 0));
         }
 
