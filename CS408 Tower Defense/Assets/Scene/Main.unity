@@ -2122,12 +2122,8 @@ Prefab:
       propertyPath: spawnZonesRoot
       value: 
       objectReference: {fileID: 393875039}
-    - target: {fileID: 54963141672381986, guid: 74c2889ff4cd2cf48be9256ea6149d85,
-        type: 2}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 136597979512033640, guid: 74c2889ff4cd2cf48be9256ea6149d85, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 74c2889ff4cd2cf48be9256ea6149d85, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &792049727
