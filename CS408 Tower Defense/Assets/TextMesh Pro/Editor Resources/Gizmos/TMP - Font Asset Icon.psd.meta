@@ -1,9 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a7cd0f8d680c9204899a5e3c4c6adf55
+=======
+guid: 7b024bd8880037b4bb6bcd92fa3620e4
+>>>>>>> origin/master
 timeCreated: 1463559213
 licenseType: Store
 TextureImporter:
   fileIDToRecycleName: {}
+<<<<<<< HEAD
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -15,6 +20,16 @@ TextureImporter:
     borderMipMap: 0
     mipMapsPreserveCoverage: 0
     alphaTestReferenceValue: 0.5
+=======
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 1
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+>>>>>>> origin/master
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -24,12 +39,20 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
+<<<<<<< HEAD
   generateCubemap: 6
   cubemapConvolution: 0
+=======
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+>>>>>>> origin/master
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 128
   textureSettings:
+<<<<<<< HEAD
     serializedVersion: 2
     filterMode: -1
     aniso: 1
@@ -40,6 +63,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+=======
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+>>>>>>> origin/master
   spriteMode: 0
   spriteExtrude: 1
   spriteMeshType: 1
@@ -47,6 +81,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+<<<<<<< HEAD
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -71,6 +106,14 @@ TextureImporter:
     sprites: []
     outline: []
     physicsShape: []
+=======
+  alphaIsTransparency: 1
+  textureType: 2
+  buildTargetSettings: []
+  spriteSheet:
+    sprites: []
+    outline: []
+>>>>>>> origin/master
   spritePackingTag: 
   userData: 
   assetBundleName: 
