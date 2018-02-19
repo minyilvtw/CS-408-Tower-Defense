@@ -32,6 +32,7 @@ public class LevelManager : MonoSingleton<LevelManager> {
 
     private void Start()
     {
+        // Setup UI
         UIManager.Instance.DrawWaveInfo();
         UIManager.Instance.DrawResourceInfo();
         InvokeRepeating("UpdateClock", 0f, 1f);
@@ -56,6 +57,9 @@ public class LevelManager : MonoSingleton<LevelManager> {
                 waveActive = false;
                 if(waves.Count == 0)
                 {
+                    // when remainding wave is no longer spawning and 
+                    //there are no more waves and enemies left
+                    // player beats the level
                     Victory();
                 }
             }
@@ -90,6 +94,7 @@ public class LevelManager : MonoSingleton<LevelManager> {
 
     private void UpdateClock()
     {
+        // Update timer, could find better implementation
         waveRemainingTime = waveRemainingTime - 1.0f;
         if(waveRemainingTime < 0)
         {
@@ -111,6 +116,11 @@ public class LevelManager : MonoSingleton<LevelManager> {
     public string GetWaveInfo()
     {
         return currentWave + " / " + amountOfWaves;
+    }
+
+    public int GetCurrentWave()
+    {
+        return currentWave;
     }
 
     public int GetLifePoint()

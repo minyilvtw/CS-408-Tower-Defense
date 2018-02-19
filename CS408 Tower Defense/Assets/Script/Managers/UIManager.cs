@@ -35,7 +35,12 @@ public class UIManager : MonoSingleton<UIManager> {
     public void DrawWaveInfo()
     {
         waveInfoText[0].text = "Level: " + LevelManager.Instance.GetLevel();
-        waveInfoText[1].text = "Current Wave: " + LevelManager.Instance.GetWaveInfo();
+        string waveType = "";
+        if (LevelManager.Instance.GetCurrentWave() % 2 == 0) {
+            // Indicator, should update into Image to be easier to understand
+            waveType = "Enemy";
+        }
+        waveInfoText[1].text = "Current Wave: " + LevelManager.Instance.GetWaveInfo() + " " + waveType;
         waveInfoText[2].text = "Time Left: " + LevelManager.Instance.GetWaveTime();
         waveInfoText[3].text = "Enemies Left: " + SpawnManager.Instance.GetEnemiesLeft();
         

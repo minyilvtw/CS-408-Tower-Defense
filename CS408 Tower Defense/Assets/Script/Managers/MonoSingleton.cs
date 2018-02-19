@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T> {
 
+    /* Monosingleton is a class that creates a monostate 
+     * to support n instanceswhere n is a fixed number
+    */
+
     private static T instance = null;
     public static T Instance {
         get
