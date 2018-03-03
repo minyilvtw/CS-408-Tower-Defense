@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreateTower : MonoBehaviour {
 
@@ -10,27 +11,31 @@ public class CreateTower : MonoBehaviour {
     public GameObject spawnZonesRoot;
     public GameObject[] towerSpawnZones;
 
+    public GameObject[] BuildSelectionPanels;
+    public GameObject SelectionPanel;
+
     public float downTime, upTime, pressTime = 0;
     public float countDown = 1f;
     public bool doing = false;
 
     void Start()
     {
-        Debug.Log(towerSpawnZones.Length + "haha");
+
     }
 
     // Update is called once per frame
     void Update() {
         if (towerSpawnZones.Length == 0)
             towerSpawnZones = GameObject.FindGameObjectsWithTag("TowerSpawnZone");
-        
+
+        SelectionPanel = GameObject.FindGameObjectWithTag("Selection Panel");
+
         // Build
         PlayerStatus progress = this.GetComponent<PlayerStatus>();
         if (!LevelManager.Instance.canBuild)
         {
             return;
-        }
-        
+        }        
 
         if (LevelManager.Instance.GetGold() < Tower[selection].GetComponent<TowerStatus>().cost[0])
         {
@@ -90,6 +95,14 @@ public class CreateTower : MonoBehaviour {
         }
 
 
+    }
+
+    public void MakeSelection(int sel)
+    {
+        selection = sel;
+
+        SelectionPanel.GetComponent<RectTransform>().position.Set(150, 0, 0);
+        
     }
 
 }

@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 114749918128025912}
   - component: {fileID: 114261639682364094}
   - component: {fileID: 114269450826660136}
-  - component: {fileID: 136597979512033640}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -331,7 +330,7 @@ Rigidbody:
   m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.5
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
@@ -455,6 +454,8 @@ MonoBehaviour:
   - {fileID: 0}
   spawnZonesRoot: {fileID: 0}
   towerSpawnZones: []
+  BuildSelectionPanels: []
+  SelectionPanel: {fileID: 0}
   downTime: 0
   upTime: 0
   pressTime: 0
@@ -564,19 +565,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!136 &136597979512033640
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528217209512684}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!222 &222079605218913374
 CanvasRenderer:
   m_ObjectHideFlags: 1
