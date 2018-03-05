@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class EnemyStatus : MonoBehaviour
 {
     public const int maxHealth = 100;
     public int currentHealth = maxHealth;
+	public static Vector3 dir = new Vector3(0,0,1);
+
 
     public RectTransform healthBar;
 
@@ -28,7 +31,6 @@ public class EnemyStatus : MonoBehaviour
     public void Update()
     {
         CharacterController controller = GetComponent<CharacterController>();
-        controller.Move(new Vector3(0,0,1) * .02f);
+		controller.Move(dir * .1f);
     }
-
 }
