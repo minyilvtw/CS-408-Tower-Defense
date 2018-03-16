@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -12,11 +13,30 @@ public class PlayerStatus : MonoBehaviour
     public RectTransform healthBar;
     public RectTransform progressBar;
 
+    private List<BaseSpell> spellBook = new List<BaseSpell>();
+
     public void Start()
     {
         currentProgress = 0;
         progressBar.sizeDelta = new Vector2(currentProgress, progressBar.sizeDelta.y);
+
+        AddSpell();
     }
+
+    private void AddSpell()
+    {
+        spellBook.Add(gameObject.AddComponent<AttackSpell>() as BaseSpell);
+
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            spellBook[0].Cast();
+        }
+    }
+
 
     public void DoAction(int amount) {
         currentProgress += amount;

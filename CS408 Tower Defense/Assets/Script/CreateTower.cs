@@ -100,9 +100,11 @@ public class CreateTower : MonoBehaviour {
     public void MakeSelection(int sel)
     {
         selection = sel;
+        Debug.Log(selection);
+        Debug.Log(GameObject.FindGameObjectWithTag("Selection Panel").GetComponent<RectTransform>().anchoredPosition.magnitude);
+        GameObject Select = GameObject.FindGameObjectWithTag("Selection Panel");
+        Select.GetComponent<RectTransform>().anchoredPosition3D.Set(100, 0, 0);
 
-        SelectionPanel.GetComponent<RectTransform>().position.Set(150, 0, 0);
-        
     }
 
 }
