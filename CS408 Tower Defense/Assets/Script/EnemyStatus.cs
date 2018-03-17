@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class EnemyStatus : MonoBehaviour
 {
     public const int maxHealth = 100;
     public int currentHealth = maxHealth;
+	public Vector3 dir;
 
     public RectTransform healthBar;
 
     public void Start()
     {
+		this.dir = new Vector3(0,0,1);
         //currentHealth ;
         healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
     }
@@ -25,10 +28,14 @@ public class EnemyStatus : MonoBehaviour
         healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
     }
 
-    public void Update()
-    {
-        CharacterController controller = GetComponent<CharacterController>();
-        controller.Move(new Vector3(0,0,1) * .02f);
-    }
+	public void ChangeDir(Vector3 direction)
+	{
+		this.dir = direction;
+	}
 
+    public void Update()
+	{
+        CharacterController controller = GetComponent<CharacterController>();
+		controller.Move(dir * .1f);
+    }
 }

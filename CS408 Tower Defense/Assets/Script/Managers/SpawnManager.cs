@@ -7,7 +7,7 @@ public class SpawnManager : MonoSingleton<SpawnManager> {
     public List<Transform> spawnPoint = new List<Transform>();
     public List<GameObject> spawnPrefabs = new List<GameObject>();
 
-    private List<GameObject> activeEnemies = new List<GameObject>();
+	private List<GameObject> activeEnemies = new List<GameObject>();
 
     public void Spawn(int spawnPrefabIndex)
     {
@@ -24,6 +24,11 @@ public class SpawnManager : MonoSingleton<SpawnManager> {
         activeEnemies.Remove(go);
         Destroy(go);
     }
+
+	public void ChangeDirection( EnemyStatus go, Vector3 direction ) {
+		go = (EnemyStatus)go;
+		go.ChangeDir (direction);
+	}
 
     public int GetEnemiesLeft()
     {
