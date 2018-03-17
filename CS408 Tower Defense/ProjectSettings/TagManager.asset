@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Towers
   - Managers
+  - Selection Panel
+  - Buttons
+  - Cooldown Text
   layers:
   - Default
   - TransparentFX
@@ -18,7 +21,7 @@ TagManager:
   - 
   - 
   - Invisible Wall
-  - 
+  - Enemy
   - 
   - 
   - 

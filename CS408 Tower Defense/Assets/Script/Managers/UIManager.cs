@@ -12,6 +12,7 @@ public class UIManager : MonoSingleton<UIManager> {
     private Toggle sellToggle;
     private Text[] waveInfoText;
     private Text[] resourceInfoText;
+    public Text[] cooldownText;
 
     public bool sellActive = false;
 
@@ -50,6 +51,13 @@ public class UIManager : MonoSingleton<UIManager> {
     {
         resourceInfoText[0].text = "Life: " + LevelManager.Instance.GetLifePoint();
         resourceInfoText[1].text = "Gold: " + LevelManager.Instance.GetGold();
+    }
+
+    public void DrawCooldownInfo()
+    {
+        // CHANGE THISS!!!!!!!!!!!!!
+        cooldownText[0].text = GameObject.FindGameObjectWithTag("Player").GetComponent<AttackSpell>().GetRemainingCDText();
+        cooldownText[1].text = GameObject.FindGameObjectWithTag("Player").GetComponent<AOESpell>().GetRemainingCDText();
     }
 
 }
