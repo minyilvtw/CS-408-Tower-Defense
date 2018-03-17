@@ -10,6 +10,7 @@ TagManager:
   - Managers
   - Selection Panel
   - Buttons
+  - Cooldown Text
   layers:
   - Default
   - TransparentFX

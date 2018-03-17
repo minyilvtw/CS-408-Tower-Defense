@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class PlayerStatus : MonoBehaviour
 {
+
     public const int maxHealth = 100;
     public int currentHealth = maxHealth;
 
@@ -26,6 +27,7 @@ public class PlayerStatus : MonoBehaviour
     private void AddSpell()
     {
         spellBook.Add(gameObject.AddComponent<AttackSpell>() as BaseSpell);
+        spellBook.Add(gameObject.AddComponent<AOESpell>() as BaseSpell);
 
     }
 
@@ -34,6 +36,10 @@ public class PlayerStatus : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             spellBook[0].Cast();
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            spellBook[1].Cast();
         }
     }
 

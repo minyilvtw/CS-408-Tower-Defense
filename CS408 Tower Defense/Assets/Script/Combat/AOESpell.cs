@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackSpell : BaseSpell {
+public class AOESpell : BaseSpell {
 
     private float hitLength;
     private Transform hitOrigin;
     private LayerMask targetMask;
     private int level = 1;
 
-    public AttackSpell()
+    public AOESpell()
     {
-        cooldown = 0.75f;
-        hitLength = 3.0f;
+        cooldown = 15f;
+        hitLength = 8.0f;
     }
 
-    public void Start()
-    {
+    void Start () {
         lastCast = Time.time - cooldown;
         hitOrigin = this.transform;
         targetMask = LayerMask.GetMask("Enemy");
@@ -24,9 +23,9 @@ public class AttackSpell : BaseSpell {
 
     public override void Action()
     {
-        int damage = 5 * level;
+        int damage = 40 * level;
 
-        foreach(Collider c in Physics.OverlapSphere(hitOrigin.position, hitLength, targetMask))
+        foreach (Collider c in Physics.OverlapSphere(hitOrigin.position, hitLength, targetMask))
         {
             EnemyStatus enemy = c.GetComponent<EnemyStatus>();
             enemy.TakeDamage(damage);

@@ -47,6 +47,8 @@ public class LevelManager : MonoSingleton<LevelManager> {
     }
 	// Update is called once per frame
 	void Update () {
+        UIManager.Instance.DrawCooldownInfo();
+
         if (!waveActive && waves.Count != 0)
         {
             StartWave();

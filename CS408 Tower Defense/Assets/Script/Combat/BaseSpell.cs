@@ -18,6 +18,26 @@ public class BaseSpell : MonoBehaviour {
         lastCast = Time.time;
     }
 
+    public float GetRemainingCD()
+    {
+        float remaining = cooldown - (Time.time - lastCast);
+        if((int)remaining <= 0)
+        {
+            remaining = 0;
+        }
+        return remaining;
+    }
+
+    public string GetRemainingCDText()
+    {
+        string text = GetRemainingCD().ToString();
+        if(GetRemainingCD() == 0)
+        {
+            text = "OK";
+        }
+        return text;
+    }
+
     public virtual bool Requirement()
     {
         if (Time.time - lastCast <= cooldown)

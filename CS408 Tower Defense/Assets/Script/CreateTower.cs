@@ -106,6 +106,7 @@ public class CreateTower : MonoBehaviour {
 
         Image im = SelectionPanels[sel].GetComponent<Image>();
         im.color = Color.red;
+
     }
 
 }
