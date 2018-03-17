@@ -25,7 +25,7 @@ public class BaseSpell : MonoBehaviour {
         {
             remaining = 0;
         }
-        return remaining;
+        return (int)remaining;
     }
 
     public string GetRemainingCDText()
