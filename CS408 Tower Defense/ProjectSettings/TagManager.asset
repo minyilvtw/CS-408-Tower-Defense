@@ -9,6 +9,7 @@ TagManager:
   - Towers
   - Managers
   - Selection Panel
+  - Buttons
   layers:
   - Default
   - TransparentFX

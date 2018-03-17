@@ -12,7 +12,7 @@ public class CreateTower : MonoBehaviour {
     public GameObject[] towerSpawnZones;
 
     public GameObject[] BuildSelectionPanels;
-    public GameObject SelectionPanel;
+    public GameObject[] SelectionPanels;
 
     public float downTime, upTime, pressTime = 0;
     public float countDown = 1f;
@@ -20,15 +20,13 @@ public class CreateTower : MonoBehaviour {
 
     void Start()
     {
-
+        MakeSelection(0);
     }
 
     // Update is called once per frame
     void Update() {
         if (towerSpawnZones.Length == 0)
             towerSpawnZones = GameObject.FindGameObjectsWithTag("TowerSpawnZone");
-
-        SelectionPanel = GameObject.FindGameObjectWithTag("Selection Panel");
 
         // Build
         PlayerStatus progress = this.GetComponent<PlayerStatus>();
@@ -100,11 +98,14 @@ public class CreateTower : MonoBehaviour {
     public void MakeSelection(int sel)
     {
         selection = sel;
-        Debug.Log(selection);
-        Debug.Log(GameObject.FindGameObjectWithTag("Selection Panel").GetComponent<RectTransform>().anchoredPosition.magnitude);
-        GameObject Select = GameObject.FindGameObjectWithTag("Selection Panel");
-        Select.GetComponent<RectTransform>().anchoredPosition3D.Set(100, 0, 0);
+    
+        foreach (GameObject go in SelectionPanels)
+        {
+            go.GetComponent<Image>().color = Color.white;
+        }
 
+        Image im = SelectionPanels[sel].GetComponent<Image>();
+        im.color = Color.red;
     }
 
 }
