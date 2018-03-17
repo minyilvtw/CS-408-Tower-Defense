@@ -4,21 +4,34 @@ using UnityEngine;
 
 public class setDestination : MonoBehaviour {
 
-	//1 for up, 2 for down, 3 for left, 4 for right
-	public int direction;
+	//1 for front, 2 for back, 3 for right, 4 for left
+	public int dir_parameter;
 
-	// Update is called once per frame
-	private void OnTriggerEnter(Collider col) {
-		Debug.Log ("Collide");
-		Debug.Log ("In collider");
-		if (direction == 1) {
-			EnemyStatus.dir = new Vector3 (0, 0, 1);
-		} else if (direction == 2) {
-			EnemyStatus.dir = new Vector3 (0, 0, -1);
-		} else if (direction == 3) {
-			EnemyStatus.dir = new Vector3 (-1, 0, 0);
-		} else {
-			EnemyStatus.dir = new Vector3 (1, 0, 0);
+	public LevelManager levelManager;
+
+	private void OnTriggerEnter(Collider col)
+	{
+		if(col.tag == "Enemy")
+		{
+			Vector3 direction;
+			if (dir_parameter == 1) {
+				direction = new Vector3 (0, 0, 1);//change direction to front
+			} else if (dir_parameter == 2) {
+				direction = new Vector3 (0, 0, -1);//change direction to back
+			} else if (dir_parameter == 3) {
+				direction = new Vector3 (1, 0, 0);//change direction to right
+			} else if (dir_parameter == 4) {
+				direction = new Vector3 (-1, 0, 0);//change direction to left
+			} else {
+				//wrong parameter, set 1 ~ 4 to dir_para in the ChangePoint
+				Debug.Log ("Wrong parameter, exit");
+				return;
+			}
+			levelManager.EnemyCrossed();
+			SpawnManager.Instance.ChangeDirection(
+				col.gameObject.GetComponent<EnemyStatus>(),
+				direction
+			);
 		}
 	}
 }
