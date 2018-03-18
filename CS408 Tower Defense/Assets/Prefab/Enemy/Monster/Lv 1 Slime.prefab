@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  movementSpeed: 0.02
+  movementSpeed: 0.01
   dir: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 224701493505876230}
   healthBarSizeFactor: 1

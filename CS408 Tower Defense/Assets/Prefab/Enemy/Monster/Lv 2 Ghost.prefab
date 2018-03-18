@@ -470,8 +470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204db8c1105050241a339e85c59f5b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 75
-  movementSpeed: 0.04
+  maxHealth: 85
+  movementSpeed: 0.03
   dir: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 224789489729689986}
   healthBarSizeFactor: 1

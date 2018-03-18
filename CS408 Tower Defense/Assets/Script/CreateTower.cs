@@ -41,13 +41,13 @@ public class CreateTower : MonoBehaviour {
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) == true) {
+        if (Input.GetKeyDown(KeyCode.B) == true) {
             doing = true;
             progress.ResetProgress();
             downTime = Time.time;
         }
 
-        if (Input.GetKey(KeyCode.Space)) {
+        if (Input.GetKey(KeyCode.B)) {
             if (downTime + countDown <= Time.time && doing == true && progress != null)
             {
                 progress.DoAction(25);
@@ -56,7 +56,7 @@ public class CreateTower : MonoBehaviour {
             }
 
         }
-        if (Input.GetKeyUp(KeyCode.Space) == true) {
+        if (Input.GetKeyUp(KeyCode.B) == true) {
             doing = false;
             downTime = 0;
             progress.ResetProgress();

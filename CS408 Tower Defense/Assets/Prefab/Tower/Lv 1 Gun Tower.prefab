@@ -249,7 +249,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1856088559818662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6.7016544}
+  m_LocalPosition: {x: 2.966861, y: 6.094964e-17, z: -4.1173916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4812036524893074}
@@ -308,7 +308,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1457909578695758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.061, y: 1.306, z: 0.852}
+  m_LocalPosition: {x: -0.003, y: 1.57, z: 0.903}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4234977909313098}
@@ -576,26 +576,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d272e6d86154b91498a23ed9da14de42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Icon:
-    m_Text: 
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  level: 0
-  cost: 3200000064000000
-  sell: 1900000032000000
+  level: 2
+  cost: 320000006400000096000000
+  sell: 19000000320000004b000000
   range:
-  - 8
   - 10
+  - 12
+  - 14
   fireRate:
-  - 1
-  - 0.5
+  - 1.3
+  - 1.5
+  - 1.7
   Description:
   - Level 1 Gun Tower
   - Level 2 Gun Tower
+  - Level 3 Gun Tower
   bulletPrefab:
   - {fileID: 1330593923863068, guid: dffae03501929424b9aafeff5f568896, type: 2}
-  - {fileID: 0}
+  - {fileID: 1330593923863068, guid: 5829511a960db4949a0734026b0d4c8c, type: 2}
+  - {fileID: 1330593923863068, guid: b31cba7352cde83499280b32546d471b, type: 2}
   bulletSpawn: {fileID: 4812036524893074}
-  partToRotate: {fileID: 0}
+  partToRotate: {fileID: 4202776701095002}
   rotationSpeed: 8
-  target: {fileID: 0}

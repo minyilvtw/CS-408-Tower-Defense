@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TowerStatus : MonoBehaviour {
 
-    public GUIContent Icon;
     [Header("Attributes")]
     public int level = 0;
     public static int maxLevel = 2;
@@ -22,6 +21,7 @@ public class TowerStatus : MonoBehaviour {
 
     public float rotationSpeed = 8f;
 
+    [System.NonSerialized]
     public Transform target;
 
     private float fireCountdown = 0f;

@@ -534,13 +534,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204db8c1105050241a339e85c59f5b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  movementSpeed: 0.04
+  maxHealth: 60
+  movementSpeed: 0.02
   dir: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 224671589219860926}
   healthBarSizeFactor: 1
   isBoss: 0
-  reward: 3
+  reward: 5
   deathEffect: {fileID: 1717175039948986, guid: 969c61f6e4a9906469738272dc662408,
     type: 2}
 --- !u!114 &114815941081169790

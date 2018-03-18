@@ -20,7 +20,6 @@ public class ThrowSpell : BaseSpell {
 
     void Start () {
         bulletPrefab = GameObject.Find("RockProjectile");
-        Debug.Log(bulletPrefab.name);
         level = 1;
         lastCast = Time.time - cooldown;
         hitOrigin = this.transform;

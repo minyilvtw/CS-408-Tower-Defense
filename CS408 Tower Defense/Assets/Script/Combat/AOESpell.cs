@@ -25,7 +25,7 @@ public class AOESpell : BaseSpell {
     public override void Action()
     {
         GameObject.Instantiate(GameObject.Find("Explosion"), this.transform.position, this.transform.rotation);
-        int damage = 40 * level;
+        int damage = 30 * level;
 
         foreach (Collider c in Physics.OverlapSphere(hitOrigin.position, hitLength, targetMask))
         {

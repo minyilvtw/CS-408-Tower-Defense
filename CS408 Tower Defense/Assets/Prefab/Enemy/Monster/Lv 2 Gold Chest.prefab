@@ -284,7 +284,7 @@ MonoBehaviour:
   healthBar: {fileID: 224782805980540890}
   healthBarSizeFactor: 1
   isBoss: 0
-  reward: 75
+  reward: 80
   deathEffect: {fileID: 1717175039948986, guid: 969c61f6e4a9906469738272dc662408,
     type: 2}
 --- !u!114 &114520651579193084

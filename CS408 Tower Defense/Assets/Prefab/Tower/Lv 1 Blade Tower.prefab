@@ -183,26 +183,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d272e6d86154b91498a23ed9da14de42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Icon:
-    m_Text: 
-    m_Image: {fileID: 0}
-    m_Tooltip: 
   level: 0
-  cost: 3200000064000000
-  sell: 1900000032000000
+  cost: 4b00000096000000e1000000
+  sell: 280000004b00000073000000
   range:
-  - 8
-  - 10
+  - 6
+  - 6
+  - 6
   fireRate:
-  - 1
-  - 0.5
+  - 0.4
+  - 0.4
+  - 0.4
   Description:
-  - Level 1 Gun Tower
-  - Level 2 Gun Tower
+  - Level 1 Blade Tower
+  - Level 2 Blade Tower
+  - Level 2 Blade Tower
   bulletPrefab:
-  - {fileID: 1330593923863068, guid: dffae03501929424b9aafeff5f568896, type: 2}
-  - {fileID: 0}
+  - {fileID: 1155690261798332, guid: 8e1a3b15e47185a49a4b2e19cf353933, type: 2}
+  - {fileID: 1155690261798332, guid: 8e1a3b15e47185a49a4b2e19cf353933, type: 2}
+  - {fileID: 1155690261798332, guid: 8e1a3b15e47185a49a4b2e19cf353933, type: 2}
   bulletSpawn: {fileID: 4716391040512582}
   partToRotate: {fileID: 0}
   rotationSpeed: 8
-  target: {fileID: 0}
