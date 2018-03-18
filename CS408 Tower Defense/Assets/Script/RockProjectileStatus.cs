@@ -23,7 +23,7 @@ public class RockProjectileStatus : MonoBehaviour {
             GameObject effect = Instantiate(impactEffect, transform.position, transform.rotation);
             Destroy(effect, 2f);
 
-            foreach (Collider c in Physics.OverlapSphere(transform.position, 2f, targetMask))
+            foreach (Collider c in Physics.OverlapSphere(transform.position, 0.5f, targetMask))
             {
                 EnemyStatus enemy2 = c.GetComponent<EnemyStatus>();
                 enemy2.TakeDamage(damage);

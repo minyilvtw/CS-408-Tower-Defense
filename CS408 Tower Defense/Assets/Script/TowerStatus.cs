@@ -26,12 +26,23 @@ public class TowerStatus : MonoBehaviour {
 
     private float fireCountdown = 0f;
 
+    public void Upgrade()
+    {
+        level++;
+    }
 
 	void Start () {
         InvokeRepeating("UpdateTarget", 0f, 1f);
 	}
 
     void UpdateTarget() {
+
+        if (this.GetComponent<BladeTowerStatus>() != null)
+        {
+            Debug.Log("BLADE");
+            return;
+        }
+
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         int lowestHealth = 99999999;
         float shortestDistance = Mathf.Infinity;
@@ -82,6 +93,12 @@ public class TowerStatus : MonoBehaviour {
 
     void Fire()
     {
+        if (this.GetComponent<BladeTowerStatus>() != null)
+        {
+            Debug.Log("BLADE");
+            return;
+        }
+
         // Create the Bullet from the Bullet Prefab
         var bullet = Instantiate(
             bulletPrefab[level],

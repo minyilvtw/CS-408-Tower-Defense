@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ThrowSpell : BaseSpell {
 
-    private float hitLength;
-    private Transform hitOrigin;
     private LayerMask targetMask;
     private int level;
     public GameObject bulletPrefab;
@@ -14,15 +12,13 @@ public class ThrowSpell : BaseSpell {
 
     public ThrowSpell()
     {
-        cooldown = 13f - level;
-        hitLength = 8.0f;
+        cooldown = 10f - level;
     }
 
     void Start () {
         bulletPrefab = GameObject.Find("RockProjectile");
         level = 1;
         lastCast = Time.time - cooldown;
-        hitOrigin = this.transform;
         targetMask = LayerMask.GetMask("Enemy");
     }
 
@@ -57,10 +53,10 @@ public class ThrowSpell : BaseSpell {
         // Create the Bullet from the Bullet Prefab
         var bullet = Instantiate(
             bulletPrefab,
-            target.position + new Vector3(0,7,0), target.rotation);
+            target.position + new Vector3(0,6.5f,0), target.rotation);
 
             // Add velocity to the bullet
-             bullet.GetComponent<Rigidbody>().velocity = bullet.transform.up * -45;
+             bullet.GetComponent<Rigidbody>().velocity = bullet.transform.up * -50;
 
             Destroy(bullet, 5.0f);
 
