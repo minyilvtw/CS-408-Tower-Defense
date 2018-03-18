@@ -49,9 +49,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4697963600250260}
-  - component: {fileID: 65219970809474680}
   - component: {fileID: 114258438171253462}
-  - component: {fileID: 114530239519048054}
+  - component: {fileID: 65219970809474680}
   m_Layer: 0
   m_Name: Lv 1 Blade Tower
   m_TagString: Towers
@@ -239,7 +238,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1311615363968168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6599894, y: 0.2, z: -1.9258528}
+  m_LocalPosition: {x: -4.6599894, y: 0.3, z: -1.9258528}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4405111169551616}
@@ -418,16 +417,3 @@ MonoBehaviour:
   - {fileID: 4617155731896864}
   - {fileID: 4660552932846106}
   - {fileID: 4716391040512582}
---- !u!114 &114530239519048054
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1311615363968168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdf7c91758f77434ebb58504729b50f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detector: {fileID: 0}
-  typeIndex: 2

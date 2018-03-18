@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 4234977909313098}
   - component: {fileID: 114931773021049584}
   - component: {fileID: 65534428539818882}
+  - component: {fileID: 114515687964371652}
   m_Layer: 0
   m_Name: Lv 1 Gun Tower
   m_TagString: Towers
@@ -249,7 +250,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1856088559818662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.966861, y: 6.094964e-17, z: -4.1173916}
+  m_LocalPosition: {x: -5.4169984, y: 0.3, z: -10.262777}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4812036524893074}
@@ -565,6 +566,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114515687964371652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856088559818662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf7c91758f77434ebb58504729b50f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detector: {fileID: 0}
+  typeIndex: 0
 --- !u!114 &114931773021049584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -576,8 +590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d272e6d86154b91498a23ed9da14de42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 2
-  cost: 320000006400000096000000
+  level: 0
+  cost: 320000003200000032000000
   sell: 19000000320000004b000000
   range:
   - 10

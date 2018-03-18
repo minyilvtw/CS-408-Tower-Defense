@@ -246,7 +246,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1309186085974718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7596965, y: 2.5103338e-17, z: -1.6958308}
+  m_LocalPosition: {x: -7.67, y: 0.3, z: -4.193886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4097303355122484}
@@ -573,7 +573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  cost: 50000000a0000000f0000000
+  cost: 500000005000000050000000
   sell: 280000005000000078000000
   range:
   - 10
@@ -589,8 +589,8 @@ MonoBehaviour:
   - Level 3 AOE Tower
   bulletPrefab:
   - {fileID: 1330593923863068, guid: cd7a7971675d9a04686ef3feaf22f5e3, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1330593923863068, guid: c4da45b788f98424496ed420c9be2450, type: 2}
+  - {fileID: 1330593923863068, guid: ddbc2f5b83d15134a8aaa2004d51834c, type: 2}
   bulletSpawn: {fileID: 4097303355122484}
   partToRotate: {fileID: 0}
   rotationSpeed: 8

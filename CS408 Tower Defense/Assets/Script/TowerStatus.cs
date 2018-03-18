@@ -28,7 +28,7 @@ public class TowerStatus : MonoBehaviour {
 
     public void Upgrade()
     {
-        level++;
+        level = level + 1;
     }
 
 	void Start () {
@@ -117,6 +117,11 @@ public class TowerStatus : MonoBehaviour {
         Destroy(bullet, 3.0f);
     }
 
+    private void OnMouseOver()
+    {
+        
+    }
+
     void OnMouseDown()
     {
 
@@ -128,6 +133,7 @@ public class TowerStatus : MonoBehaviour {
             foreach(GameObject towerZone in GameObject.FindGameObjectsWithTag("TowerSpawnZone"))
             {
                 float distanceToZone = Vector3.Distance(gameObject.transform.position, towerZone.transform.position);
+                
                 if (distanceToZone < shortestDistance)
                 {
                     shortestDistance = distanceToZone;
@@ -139,8 +145,17 @@ public class TowerStatus : MonoBehaviour {
             Debug.Log("SOLD!");
             Destroy(gameObject);
             LevelManager.Instance.SetGold(sell[level]);
+        } else {
+            float distanceToPlayer = Vector3.Distance(gameObject.transform.position, GameObject.Find("Player").transform.position);
+            if (level < 2 && LevelManager.Instance.GetGold() > cost[0] && distanceToPlayer < 5.0f)
+            {
+                Upgrade();
+                Debug.Log("Upgrade!");
+                LevelManager.Instance.SetGold(-cost[0]);
+            }
+            
         }
-        
+
     }
 
 

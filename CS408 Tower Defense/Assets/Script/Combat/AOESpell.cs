@@ -11,7 +11,7 @@ public class AOESpell : BaseSpell {
 
     public AOESpell()
     {
-        cooldown = 30f;
+        cooldown = 75f;
         hitLength = 5.0f;
     }
 
