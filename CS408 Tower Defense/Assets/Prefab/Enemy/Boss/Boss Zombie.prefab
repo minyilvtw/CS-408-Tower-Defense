@@ -1149,7 +1149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1582313814484912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -7.071}
+  m_LocalPosition: {x: -2.5227273, y: 0.77611685, z: -10.073247}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224708517458797560}
@@ -1621,11 +1621,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204db8c1105050241a339e85c59f5b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 450
-  movementSpeed: 0.028
+  maxHealth: 850
+  movementSpeed: 0.025
   dir: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 224845826840492408}
   healthBarSizeFactor: 2
+  isBoss: 1
+  reward: 50
+  deathEffect: {fileID: 1717175039948986, guid: 969c61f6e4a9906469738272dc662408,
+    type: 2}
 --- !u!114 &114339335186276722
 MonoBehaviour:
   m_ObjectHideFlags: 1

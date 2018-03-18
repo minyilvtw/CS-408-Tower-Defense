@@ -7,7 +7,6 @@ public class setDestination : MonoBehaviour {
 	//1 for front, 2 for back, 3 for right, 4 for left
 	public int dir_parameter;
 
-	public LevelManager levelManager;
 
 	private void OnTriggerEnter(Collider col)
 	{
@@ -27,7 +26,7 @@ public class setDestination : MonoBehaviour {
 				Debug.Log ("Wrong parameter, exit");
 				return;
 			}
-			levelManager.EnemyCrossed();
+			//levelManager.EnemyCrossed(1);
 			SpawnManager.Instance.ChangeDirection(
 				col.gameObject.GetComponent<EnemyStatus>(),
 				direction

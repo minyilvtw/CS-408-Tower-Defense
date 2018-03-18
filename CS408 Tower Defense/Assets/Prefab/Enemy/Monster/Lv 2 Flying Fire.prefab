@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 114157897694138322}
   - component: {fileID: 143600559490079280}
   m_Layer: 9
-  m_Name: Lv1 Flying Fire
+  m_Name: Lv 2 Flying Fire
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,7 +281,7 @@ Transform:
   m_GameObject: {fileID: 1587505067679194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4626307002676200}
   - {fileID: 4233856520313970}
@@ -388,11 +388,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204db8c1105050241a339e85c59f5b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 65
-  movementSpeed: 0.04
+  maxHealth: 155
+  movementSpeed: 0.05
   dir: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 224430349598110976}
   healthBarSizeFactor: 1
+  isBoss: 0
+  reward: 20
+  deathEffect: {fileID: 1717175039948986, guid: 969c61f6e4a9906469738272dc662408,
+    type: 2}
 --- !u!114 &114374487215657778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -631,7 +635,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.5}
+  m_AnchoredPosition: {x: 0, y: 1.8}
   m_SizeDelta: {x: 100, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224824310127275976

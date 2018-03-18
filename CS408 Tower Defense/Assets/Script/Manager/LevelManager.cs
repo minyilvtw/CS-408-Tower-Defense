@@ -38,10 +38,11 @@ public class LevelManager : MonoSingleton<LevelManager> {
         InvokeRepeating("UpdateClock", 0f, 1f);
     }
 
-    public void EnemyCrossed() {
-        lifePoint--;
+    public void EnemyCrossed(int amount) {
+    
+        lifePoint = lifePoint - amount;
         UIManager.Instance.DrawResourceInfo();
-        if (lifePoint == 0) {
+        if (lifePoint <= 0) {
             Defeat();
         }
     }

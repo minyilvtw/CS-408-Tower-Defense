@@ -3,6 +3,8 @@
 public class KeyboardMovement : MonoBehaviour
 {
     public float mSpeed = 10;
+    
+
     void Update()
     {
         bool doing = this.GetComponent<CreateTower>().doing;
@@ -14,6 +16,7 @@ public class KeyboardMovement : MonoBehaviour
             position.x += x;
             position.z += z;
             this.transform.position = position;
+            this.GetComponentInChildren<Animation>().Play("Walk");
         }
     }
 

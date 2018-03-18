@@ -40,20 +40,22 @@ public class CreateTower : MonoBehaviour {
             return;
         }
 
-        if (Input.GetKeyDown("space") == true) {
+        if (Input.GetKeyDown(KeyCode.Space) == true) {
             doing = true;
             downTime = Time.time;
+            Debug.Log("PRES");
         }
 
-        if (Input.GetKey("space")) {
+        if (Input.GetKey(KeyCode.Space)) {
             if (downTime + countDown <= Time.time && doing == true && progress != null)
             {
                 progress.DoAction(25);
                 downTime = Time.time;
+                this.GetComponentInChildren<Animation>().Play("Lumbering");
             }
 
         }
-        if (Input.GetKeyUp("space") == true) {
+        if (Input.GetKeyUp(KeyCode.Space) == true) {
             doing = false;
             downTime = 0;
             progress.ResetProgress();
