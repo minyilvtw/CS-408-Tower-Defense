@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class PlayerStatus : MonoBehaviour
 {
 
-    public const int maxHealth = 100;
-    public int currentHealth = maxHealth;
+    public int maxHealth = 100;
+    private int currentHealth;
 
     public const int maxProgress = 100;
     public int currentProgress;
@@ -20,7 +20,7 @@ public class PlayerStatus : MonoBehaviour
     {
         currentProgress = 0;
         progressBar.sizeDelta = new Vector2(currentProgress, progressBar.sizeDelta.y);
-
+        currentHealth = maxHealth;
         AddSpell();
     }
 
@@ -29,6 +29,11 @@ public class PlayerStatus : MonoBehaviour
         spellBook.Add(gameObject.AddComponent<AttackSpell>() as BaseSpell);
         spellBook.Add(gameObject.AddComponent<AOESpell>() as BaseSpell);
 
+    }
+
+    public void CastSpell(int x)
+    {
+        spellBook[x].Cast();
     }
 
     private void Update()

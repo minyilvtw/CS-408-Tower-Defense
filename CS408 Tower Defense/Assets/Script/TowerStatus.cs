@@ -39,7 +39,7 @@ public class TowerStatus : MonoBehaviour {
 
         foreach (GameObject enemy in enemies) {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            int enemyHealth = enemy.GetComponent<EnemyStatus>().currentHealth;
+            float enemyHealth = enemy.GetComponent<EnemyStatus>().currentHealth;
             if (distanceToEnemy < shortestDistance)
             {
                 shortestDistance = distanceToEnemy;

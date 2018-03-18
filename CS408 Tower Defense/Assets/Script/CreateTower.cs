@@ -97,16 +97,16 @@ public class CreateTower : MonoBehaviour {
 
     public void MakeSelection(int sel)
     {
-        selection = sel;
-    
-        foreach (GameObject go in SelectionPanels)
-        {
-            go.GetComponent<Image>().color = Color.white;
-        }
+            selection = sel;
 
-        Image im = SelectionPanels[sel].GetComponent<Image>();
-        im.color = Color.red;
+            foreach (GameObject go in SelectionPanels)
+            {
+                go.GetComponent<Image>().color = Color.white;
+            }
 
+            Image im = SelectionPanels[sel].GetComponent<Image>();
+            im.color = Color.red;
+        
     }
 
 }
