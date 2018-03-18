@@ -55,8 +55,7 @@ public class UIManager : MonoSingleton<UIManager> {
 
     public void DrawCooldownInfo()
     {
-        // CHANGE THISS!!!!!!!!!!!!!
-        cooldownText[0].text = GameObject.FindGameObjectWithTag("Player").GetComponent<AttackSpell>().GetRemainingCDText();
+        cooldownText[0].text = GameObject.FindGameObjectWithTag("Player").GetComponent<ThrowSpell>().GetRemainingCDText();
         cooldownText[1].text = GameObject.FindGameObjectWithTag("Player").GetComponent<AOESpell>().GetRemainingCDText();
     }
 

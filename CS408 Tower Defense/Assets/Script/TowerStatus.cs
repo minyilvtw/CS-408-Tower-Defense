@@ -62,12 +62,14 @@ public class TowerStatus : MonoBehaviour {
 
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime).eulerAngles;
-        transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
-        //Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, rotationSpeed * Time.deltaTime).eulerAngles;
-        //partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        //Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime).eulerAngles;
+        //transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        if(partToRotate != null) { 
+            Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, rotationSpeed * Time.deltaTime).eulerAngles;
+            partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        }
 
-        if(fireCountdown <= 0f)
+        if (fireCountdown <= 0f)
         {
             Fire();
             fireCountdown = 1f / fireRate[level];

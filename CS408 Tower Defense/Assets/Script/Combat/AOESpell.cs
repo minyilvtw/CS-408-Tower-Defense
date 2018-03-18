@@ -7,15 +7,16 @@ public class AOESpell : BaseSpell {
     private float hitLength;
     private Transform hitOrigin;
     private LayerMask targetMask;
-    private int level = 1;
+    private int level;
 
     public AOESpell()
     {
-        cooldown = 15f;
-        hitLength = 8.0f;
+        cooldown = 30f;
+        hitLength = 5.0f;
     }
 
     void Start () {
+        level = 1;
         lastCast = Time.time - cooldown;
         hitOrigin = this.transform;
         targetMask = LayerMask.GetMask("Enemy");
@@ -23,6 +24,7 @@ public class AOESpell : BaseSpell {
 
     public override void Action()
     {
+        GameObject.Instantiate(GameObject.Find("Explosion"), this.transform.position, this.transform.rotation);
         int damage = 40 * level;
 
         foreach (Collider c in Physics.OverlapSphere(hitOrigin.position, hitLength, targetMask))

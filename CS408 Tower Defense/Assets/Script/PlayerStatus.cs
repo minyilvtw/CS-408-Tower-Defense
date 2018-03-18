@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class PlayerStatus : MonoBehaviour
 {
 
-    public int maxHealth = 100;
-    private int currentHealth;
+    public int maxWood = 100;
+    private int currentWood;
 
     public const int maxProgress = 100;
     public int currentProgress;
@@ -20,13 +20,14 @@ public class PlayerStatus : MonoBehaviour
     {
         currentProgress = 0;
         progressBar.sizeDelta = new Vector2(currentProgress, progressBar.sizeDelta.y);
-        currentHealth = maxHealth;
+        currentWood = maxWood;
         AddSpell();
     }
 
     private void AddSpell()
     {
         spellBook.Add(gameObject.AddComponent<AttackSpell>() as BaseSpell);
+        spellBook.Add(gameObject.AddComponent<ThrowSpell>() as BaseSpell);
         spellBook.Add(gameObject.AddComponent<AOESpell>() as BaseSpell);
 
     }
@@ -42,9 +43,13 @@ public class PlayerStatus : MonoBehaviour
         {
             spellBook[0].Cast();
         }
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             spellBook[1].Cast();
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            spellBook[2].Cast();
         }
     }
 
@@ -64,10 +69,10 @@ public class PlayerStatus : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        currentHealth -= amount;
-        if (currentHealth <= 0)
+        currentWood -= amount;
+        if (currentWood <= 0)
         {
-            currentHealth = 0;
+            currentWood = 0;
             Debug.Log("Dead!");
         }
     }

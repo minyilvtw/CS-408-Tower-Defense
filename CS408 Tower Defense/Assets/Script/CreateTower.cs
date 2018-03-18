@@ -37,13 +37,14 @@ public class CreateTower : MonoBehaviour {
 
         if (LevelManager.Instance.GetGold() < Tower[selection].GetComponent<TowerStatus>().cost[0])
         {
+            progress.ResetProgress();
             return;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) == true) {
             doing = true;
+            progress.ResetProgress();
             downTime = Time.time;
-            Debug.Log("PRES");
         }
 
         if (Input.GetKey(KeyCode.Space)) {
