@@ -51,6 +51,23 @@ public class PlayerStatus : MonoBehaviour
         {
             spellBook[2].Cast();
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            this.GetComponent<CreateTower>().MakeSelection(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            this.GetComponent<CreateTower>().MakeSelection(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            this.GetComponent<CreateTower>().MakeSelection(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            this.GetComponent<CreateTower>().MakeSelection(3);
+        }
+
     }
 
 

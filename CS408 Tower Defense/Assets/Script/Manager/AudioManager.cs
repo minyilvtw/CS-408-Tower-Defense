@@ -14,7 +14,7 @@ public class AudioManager : MonoSingleton<AudioManager> {
 
     public void PlaySound(int i)
     {
-        source.PlayOneShot(SFX[i], 1f);
+       // source.PlayOneShot(SFX[i], 1f);
     }
 
 }
