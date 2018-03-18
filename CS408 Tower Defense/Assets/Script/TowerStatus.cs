@@ -152,6 +152,7 @@ public class TowerStatus : MonoBehaviour {
                 Upgrade();
                 Debug.Log("Upgrade!");
                 LevelManager.Instance.SetGold(-cost[0]);
+                
             }
             
         }
