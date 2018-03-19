@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class ButtonScript : MonoBehaviour {
 
@@ -16,6 +15,11 @@ public class ButtonScript : MonoBehaviour {
 
     void TaskOnClick()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<CreateTower>().MakeSelection(buttonNumber);
+        if (buttonNumber < 0)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().CastSpell(buttonNumber + 2);
+        } else {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<CreateTower>().MakeSelection(buttonNumber);
+        }
     }
 }
