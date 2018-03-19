@@ -2713,6 +2713,11 @@ Prefab:
       propertyPath: cooldownText.Array.data[1]
       value: 
       objectReference: {fileID: 45480089}
+    - target: {fileID: 114423641464903772, guid: 5d553c2eb4d8c5844a0d0c7d54afec8a,
+        type: 2}
+      propertyPath: InfoText
+      value: 
+      objectReference: {fileID: 1874788592}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d553c2eb4d8c5844a0d0c7d54afec8a, type: 2}
   m_IsPrefabParent: 0
@@ -4423,6 +4428,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0031529fd4dfe64bb13748787ceb7d5, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1874788592 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114964218665721776, guid: a0031529fd4dfe64bb13748787ceb7d5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1874788591}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1983543838 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1750389068687128, guid: a0031529fd4dfe64bb13748787ceb7d5,
