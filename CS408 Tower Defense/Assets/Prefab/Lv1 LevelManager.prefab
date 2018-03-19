@@ -1,0 +1,454 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1293390342682498}
+  m_IsPrefabParent: 1
+--- !u!1 &1293390342682498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4514465597102300}
+  - component: {fileID: 114998646747143496}
+  - component: {fileID: 114581851545249164}
+  - component: {fileID: 114068113640701024}
+  - component: {fileID: 114211091600122756}
+  - component: {fileID: 114036300610029394}
+  - component: {fileID: 114866862076682456}
+  - component: {fileID: 114613581618378416}
+  - component: {fileID: 114805278555104974}
+  - component: {fileID: 114212025626582398}
+  - component: {fileID: 114398822022681534}
+  - component: {fileID: 114866929465404896}
+  - component: {fileID: 114334427126783950}
+  - component: {fileID: 114887488106129092}
+  - component: {fileID: 114152330788631904}
+  - component: {fileID: 114961344896047464}
+  - component: {fileID: 114251950912790376}
+  - component: {fileID: 114273917662017382}
+  - component: {fileID: 114657890680086926}
+  - component: {fileID: 114555766967529516}
+  - component: {fileID: 114485556560104304}
+  - component: {fileID: 114889922927921634}
+  m_Layer: 0
+  m_Name: Lv1 LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4514465597102300
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114036300610029394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 2
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 1
+      spawnCount: 2
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 1
+      spawnCount: 2
+      spawnInterval: 2
+--- !u!114 &114068113640701024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 1
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 0
+      spawnCount: 2
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 0
+      spawnCount: 2
+      spawnInterval: 2
+--- !u!114 &114152330788631904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114211091600122756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114212025626582398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 4
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 4
+      spawnCount: 1
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 5
+      spawnCount: 2
+      spawnInterval: 2
+--- !u!114 &114251950912790376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114273917662017382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 8
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 10
+      spawnCount: 1
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 9
+      spawnCount: 2
+      spawnInterval: 2
+--- !u!114 &114334427126783950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114398822022681534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114485556560104304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114555766967529516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 9
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 3
+      spawnCount: 9
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 2
+      spawnCount: 8
+      spawnInterval: 2
+--- !u!114 &114581851545249164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114613581618378416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 3
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 2
+      spawnCount: 1
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 3
+      spawnCount: 2
+      spawnInterval: 2
+--- !u!114 &114657890680086926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114805278555104974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114866862076682456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Setup Time
+  events:
+  - waveDuration: 10
+    spawnInfos: []
+--- !u!114 &114866929465404896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 5
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 5
+      spawnCount: 1
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 6
+      spawnCount: 2
+      spawnInterval: 2
+--- !u!114 &114887488106129092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 6
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 7
+      spawnCount: 1
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 6
+      spawnCount: 2
+      spawnInterval: 2
+--- !u!114 &114889922927921634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 10
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 14
+      spawnCount: 1
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 1
+      spawnCount: 8
+      spawnInterval: 3
+--- !u!114 &114961344896047464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f9872185870144d9a3a0aa9846ec9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Wave 7
+  events:
+  - waveDuration: 25
+    spawnInfos:
+    - spawnPointIndex: 0
+      spawnPrefabIndex: 8
+      spawnCount: 1
+      spawnInterval: 1
+    - spawnPointIndex: 1
+      spawnPrefabIndex: 7
+      spawnCount: 2
+      spawnInterval: 2
+--- !u!114 &114998646747143496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293390342682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59fad6734a40b2540a4fcdd13083eb3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBuild: 0
