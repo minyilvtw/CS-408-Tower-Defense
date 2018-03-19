@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoSingleton<LevelManager> {
 
+    private int lifePoint = 25;
     private int gold = 100;
     private int currentLevel;
     private int currentWave;
