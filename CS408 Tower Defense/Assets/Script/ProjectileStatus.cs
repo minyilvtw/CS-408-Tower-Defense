@@ -7,7 +7,8 @@ public class ProjectileStatus : MonoBehaviour {
     public int damage;
     public float speed;
 
-    private Transform target;
+    [System.NonSerialized]
+    public Transform target;
 
     public GameObject impactEffect;
 
@@ -36,7 +37,7 @@ public class ProjectileStatus : MonoBehaviour {
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-    void HitTarget() {
+    public virtual void HitTarget() {
         Destroy(gameObject);
         GameObject effect = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effect, 2f);
