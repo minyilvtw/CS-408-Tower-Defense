@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoSingleton<LevelManager> {
 
@@ -10,6 +11,8 @@ public class LevelManager : MonoSingleton<LevelManager> {
     private int currentWave;
     private int amountOfWaves;
     private float waveRemainingTime;
+
+    public GameObject Canvas;
 
     public bool canBuild = false;
 
@@ -143,15 +146,17 @@ public class LevelManager : MonoSingleton<LevelManager> {
     }
 
 
-    private void Victory()
+    public void Victory()
     {
         UIManager.Instance.InfoText.text = "Level is cleared!";
         Debug.Log("Level is cleared");
-
+        Canvas.active = true;
     }
 
-    private void Defeat()
+    public void Defeat()
     {
+        Canvas.active = true;
+        Canvas.GetComponentInChildren<Text>().text = "You Lost!";
         UIManager.Instance.InfoText.text = "You Lost!";
     }
 
