@@ -57,4 +57,5 @@ MonoBehaviour:
   cooldownText:
   - {fileID: 0}
   - {fileID: 0}
+  InfoText: {fileID: 0}
   sellActive: 0

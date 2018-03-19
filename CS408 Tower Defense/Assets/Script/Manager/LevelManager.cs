@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoSingleton<LevelManager> {
 
-    private int lifePoint = 10;
+    private int lifePoint = 25;
     private int gold = 100;
     private int currentLevel;
     private int currentWave;
@@ -56,6 +56,7 @@ public class LevelManager : MonoSingleton<LevelManager> {
         } else {
             if(!spawnActive && !GameObject.FindGameObjectWithTag("Enemy"))
             {
+                UIManager.Instance.InfoText.text = "Wave Cleared!";
                 Debug.Log("Wave cleared");
                 waveActive = false;
                 if(waves.Count == 0)
@@ -76,6 +77,7 @@ public class LevelManager : MonoSingleton<LevelManager> {
             waveRemainingTime = waves[0].events[0].waveDuration;
         }
         currentWave++;
+        UIManager.Instance.InfoText.text = "Wave Starting!";
         Debug.Log("Wave Starting");
         waves[0].StartWave();
         spawnActive = true;
@@ -143,13 +145,14 @@ public class LevelManager : MonoSingleton<LevelManager> {
 
     private void Victory()
     {
+        UIManager.Instance.InfoText.text = "Level is cleared!";
         Debug.Log("Level is cleared");
 
     }
 
     private void Defeat()
     {
-        Debug.Log("LOST");
+        UIManager.Instance.InfoText.text = "You Lost!";
     }
 
 }

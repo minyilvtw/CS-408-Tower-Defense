@@ -142,7 +142,7 @@ public class TowerStatus : MonoBehaviour {
             }
 
             bestSpot.GetComponent<ZoneBuildable>().zoneTaken = false;
-            Debug.Log("SOLD!");
+            UIManager.Instance.InfoText.text = "Sold!";
             Destroy(gameObject);
             LevelManager.Instance.SetGold(sell[level]);
         } else {
@@ -150,9 +150,8 @@ public class TowerStatus : MonoBehaviour {
             if (level < 2 && LevelManager.Instance.GetGold() > cost[0] && distanceToPlayer < 5.0f)
             {
                 Upgrade();
-                Debug.Log("Upgrade!");
                 LevelManager.Instance.SetGold(-cost[0]);
-                
+                UIManager.Instance.InfoText.text = "Upgraded!";
             }
             
         }

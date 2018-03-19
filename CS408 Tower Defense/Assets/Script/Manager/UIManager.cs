@@ -13,6 +13,7 @@ public class UIManager : MonoSingleton<UIManager> {
     private Text[] waveInfoText;
     private Text[] resourceInfoText;
     public Text[] cooldownText;
+    public Text InfoText;
 
     public bool sellActive = false;
 
@@ -25,6 +26,12 @@ public class UIManager : MonoSingleton<UIManager> {
         sellToggle.onValueChanged.AddListener(delegate {
              ToggleValueChanged(sellToggle);
          });
+        InvokeRepeating("ClearText", 0f, 5f);
+    }
+
+    void ClearText()
+    {
+        InfoText.text = "";
     }
 
     void ToggleValueChanged(Toggle change)

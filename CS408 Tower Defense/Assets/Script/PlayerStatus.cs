@@ -67,6 +67,10 @@ public class PlayerStatus : MonoBehaviour
         {
             this.GetComponent<CreateTower>().MakeSelection(3);
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            LevelManager.Instance.SetGold(100);
+        }
 
     }
 
