@@ -2078,7 +2078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da255242e0889448a5319db780a242f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxWood: 100
   currentProgress: 0
   healthBar: {fileID: 224719249814782574}
   progressBar: {fileID: 224794659585745116}
