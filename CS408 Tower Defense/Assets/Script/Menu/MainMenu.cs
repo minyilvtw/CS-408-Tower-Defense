@@ -9,15 +9,16 @@ public class MainMenu : MonoBehaviour {
     {
         Debug.Log("Loading next scene");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("ExtraMain");
     }
     public void QuitGame()
     {
         Debug.Log("Quit");
+		SceneManager.LoadScene("Login");
         Application.Quit();
     }
 	public void toLv1() {
-		SceneManager.LoadScene ("Main");
+		SceneManager.LoadScene ("ExtraMain");
 	}
 
 	public void toLv2() {

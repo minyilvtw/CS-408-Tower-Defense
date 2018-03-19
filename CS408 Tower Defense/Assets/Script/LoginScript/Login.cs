@@ -12,6 +12,7 @@ public class Login : MonoBehaviour {
 	public Button toRegisterBtn;
 	public GameObject loginMenu;
 	public GameObject registerMenu;
+	public Text Invalid;
 
 	void Start()
 	{
@@ -23,18 +24,22 @@ public class Login : MonoBehaviour {
 
 	void loginToGame()
 	{
-		Variables.username = usernameUI.text;
-		Variables.password = passwordUI.text;
-		Debug.Log (Variables.username);
-		Debug.Log (Variables.password);
-		if (checkInfo (Variables.username, Variables.password)) {
+
+		if (checkInfo(usernameUI.text, passwordUI.text)) {
 			Application.LoadLevel (1);
+		} else {
+			Invalid.text = "Invalid Input";
+			Debug.Log ("Invalid Input");
 		}
 	}
 
 	bool checkInfo(string usrn, string pwd) {
 		//checkInfo
-		return true;
+
+		if (usrn == Players.username && pwd == Players.password) {
+			return true;
+		}
+		return false;
 	}
 
 	void showRegister() {
