@@ -25,13 +25,13 @@ public class Register : MonoBehaviour {
 
 	void loginToGame()
 	{
-		Variables.username = usernameUI.text;
+		Players.username = usernameUI.text;
 		string email = emailUI.text;
-		Variables.password = passwordUI.text;
-		Debug.Log (Variables.username);
-		Debug.Log (Variables.password);
+		Players.password = passwordUI.text;
+		Debug.Log (Players.username);
+		Debug.Log (Players.password);
 		Debug.Log (email);
-		if (checkInfo (Variables.username, Variables.password)) {
+		if (checkInfo (Players.username, Players.password)) {
 			Application.LoadLevel (1);
 		} else {
 			Invalid.text = "Invalid Input";
@@ -53,6 +53,7 @@ public class Register : MonoBehaviour {
 		registerMenu.SetActive (false);
 		loginMenu.SetActive(true);
 	}
+
 
 
 }

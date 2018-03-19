@@ -10,10 +10,11 @@ using UnityEngine;
  * Wayne
  */
 
-public class Variables : MonoBehaviour {
+public class Players : MonoBehaviour {
 
 	public static string username;
 	public static string password;
+	public static int levels;
 
 
 	// Use this for initialization
