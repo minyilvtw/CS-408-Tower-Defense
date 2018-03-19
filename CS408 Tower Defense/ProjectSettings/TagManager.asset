@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - TowerSpawnZone
+  - Enemy
+  - Towers
+  - Managers
+  - Selection Panel
+  - Buttons
+  - Cooldown Text
   layers:
   - Default
   - TransparentFX
@@ -13,8 +20,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Invisible Wall
+  - Enemy
   - 
   - 
   - 

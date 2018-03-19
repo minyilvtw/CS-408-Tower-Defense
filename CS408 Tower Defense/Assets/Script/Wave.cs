@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour {
 
+    public string description;
+
     public List<WaveEvent> events = new List<WaveEvent>();
 
     private bool isPlaying = false;
