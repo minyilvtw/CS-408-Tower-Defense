@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 114269450826660136}
   - component: {fileID: 136324240166076910}
   m_Layer: 0
-  m_Name: Player With Model
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1371,7 +1371,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1667205545707710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0, y: -0.2, z: 1.5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4934517360242902}
@@ -1618,7 +1618,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1528217209512684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8931608, y: 1.2, z: -8.592153}
+  m_LocalPosition: {x: 0, y: 1.3, z: -11.685954}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224592816764694394}
@@ -2050,10 +2050,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tower:
-  - {fileID: 1055245726043240, guid: 582e643816525d648a597b62afdc9409, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1856088559818662, guid: 2dc5a680083eac54ca06d08b76dc4165, type: 2}
+  - {fileID: 1309186085974718, guid: 9c38def0b8b65ea4abb9e5fae0073dc3, type: 2}
+  - {fileID: 1311615363968168, guid: e6dfec8fe277dcd47ac064cdf81e7fc1, type: 2}
+  - {fileID: 1162605187046492, guid: 1132718576671e34db03f372fa5e1300, type: 2}
   spawnZonesRoot: {fileID: 0}
   towerSpawnZones: []
   BuildSelectionPanels: []
