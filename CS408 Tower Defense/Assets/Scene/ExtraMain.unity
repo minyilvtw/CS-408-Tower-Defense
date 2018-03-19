@@ -2146,6 +2146,54 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114160325280353200, guid: 99a15907a9abef54a9b58545c5c04c8a,
+        type: 2}
+      propertyPath: m_Text
+      value: 'The goal of this game is to survive multiple waves of enemies by building
+        defenses that attack the enemy. To build and upgrade defenses, the player
+        needs to earn gold, which is awarded by default as well as by killing enemies.
+        Once all waves are defeated, the player is successful and wins the game.
+
+
+        Key:
+
+        B - Build
+
+        F - Rock Spell
+
+        V - Explosion Spell
+
+        ESC - Pause'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397732148526854, guid: 99a15907a9abef54a9b58545c5c04c8a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224786704228171112, guid: 99a15907a9abef54a9b58545c5c04c8a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224786704228171112, guid: 99a15907a9abef54a9b58545c5c04c8a,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 224786704228171112, guid: 99a15907a9abef54a9b58545c5c04c8a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224786704228171112, guid: 99a15907a9abef54a9b58545c5c04c8a,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -460
+      objectReference: {fileID: 0}
+    - target: {fileID: 224084315509247974, guid: 99a15907a9abef54a9b58545c5c04c8a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99a15907a9abef54a9b58545c5c04c8a, type: 2}
   m_IsPrefabParent: 0
@@ -4253,7 +4301,7 @@ Prefab:
     - target: {fileID: 224678988369033904, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -37.5
       objectReference: {fileID: 0}
     - target: {fileID: 224928813742644070, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4268,7 +4316,7 @@ Prefab:
     - target: {fileID: 224928813742644070, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 224961160655380732, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4283,7 +4331,7 @@ Prefab:
     - target: {fileID: 224961160655380732, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -112.5
       objectReference: {fileID: 0}
     - target: {fileID: 224194411660953634, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4303,7 +4351,7 @@ Prefab:
     - target: {fileID: 224194411660953634, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 224648895541108488, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4338,7 +4386,7 @@ Prefab:
     - target: {fileID: 224921803731864976, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 224840338321238608, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4358,7 +4406,7 @@ Prefab:
     - target: {fileID: 224840338321238608, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 224970254795449718, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4393,7 +4441,7 @@ Prefab:
     - target: {fileID: 224461073097680896, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224111368811789902, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4413,7 +4461,7 @@ Prefab:
     - target: {fileID: 224111368811789902, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224022878657364344, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4433,7 +4481,7 @@ Prefab:
     - target: {fileID: 224022878657364344, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224308574176597940, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4453,7 +4501,7 @@ Prefab:
     - target: {fileID: 224308574176597940, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224219324338629856, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4473,7 +4521,7 @@ Prefab:
     - target: {fileID: 224219324338629856, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224735861616107790, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
@@ -4493,7 +4541,7 @@ Prefab:
     - target: {fileID: 224735861616107790, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224715864850544008, guid: a0031529fd4dfe64bb13748787ceb7d5,
         type: 2}
